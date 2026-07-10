@@ -28,7 +28,7 @@ module Controller(
     
     wire tick_25;
     
-    Clk_25MHz mod1(.clk(clk), .rst(rst), .clk_25(tick_25));
+    Clk_25MHz mod1(clk, rst, tick_25);
     
     always @(posedge tick_25) begin
       if(rst) begin
